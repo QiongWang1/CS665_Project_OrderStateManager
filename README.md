@@ -50,6 +50,11 @@ The use of inheritance and composition avoids duplicated code. For example, the 
 # UML Class Diagram
 (https://lucid.app/lucidchart/1d4adc34-65e9-4a6f-851b-6aaa643021f5/edit?viewport_loc=-833%2C-361%2C3439%2C2966%2C0_0&invitationId=inv_85165761-77e7-480b-a0a7-e2ed0385c7b2)
 
+[UML_665_Hw1.pdf](..%2F..%2F..%2FDesktop%2FBU%20courses%2F2024_fall%2FCS%20665%20-SW%20DESIGN%20%26%20PAT%2FHW%2FHw1%2FAnswer%2FUML_665_Hw1.pdf)
+![img.png](img.png)
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
+
 The following key classes are included:
 - **Beverage**: Abstract class representing the basic drink.
 - **Coffee** and **Tea**: Concrete implementations of Beverage.
