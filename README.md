@@ -57,6 +57,24 @@ The following key classes are included:
 - **Milk** and **Sugar**: Concrete decorators for adding condiments.
 - **VendingMachine**: Manages beverage creation and selection.
 
+# Running JUnit Tests
+To ensure the functionality of the beverage vending machine, several JUnit tests have been implemented. These tests verify the correct behavior of the beverage creation process, condiment addition, and pricing calculation. The tests are located in the src/test/java/edu/bu/met/cs665/hw1 directory.
+
+Steps to Run JUnit Tests:
+1. Compile the project: Before running the tests, ensure that the project is compiled.
+```bash
+mvn clean compile
+```
+2. Run all JUnit tests: To run all the JUnit tests, use the following Maven command:
+```bash
+mvn test
+```
+3. Test Report: After running the tests, Maven will generate a test report showing the success or failure of each test case. The test results will be displayed in the terminal, and you can also find detailed reports in the target/surefire-reports directory.
+
+By following these steps, all implemented tests will be executed, confirming that the program behaves as expected.
+
+
+
 # Maven Commands
 
 ### Prerequisites
