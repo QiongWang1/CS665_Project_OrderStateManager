@@ -7,7 +7,7 @@
 
     <!-- GroupId and ArtifactId for the project -->
     <groupId>edu.bu.cs665</groupId>
-    <artifactId>Hw1_Automatic_Beverage</artifactId>
+    <artifactId>Hw2</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <!-- Project Packaging Type -->
@@ -75,7 +75,7 @@
                     <includeProjectDependencies>true</includeProjectDependencies>
                     <includePluginDependencies>true</includePluginDependencies>
                     <killAfter>-1</killAfter>
-                    <mainClass>edu.bu.met.cs665.hw1.Main</mainClass>
+                    <mainClass>cope.Main</mainClass>
                     <cleanupDaemonThreads>false</cleanupDaemonThreads>
                 </configuration>
             </plugin>
@@ -84,7 +84,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>edu.bu.met.cs665.hw1.Main</mainClass>
+                            <mainClass>cope.Main</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
