@@ -1,21 +1,22 @@
-<!-- This is the root element of the pom.xml file, which defines the project information and specifies the location of the POM schema. -->
+<!-- Root element for the pom.xml file, defining project information and specifying the POM schema location -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <!-- Project Model Version -->
     <modelVersion>4.0.0</modelVersion>
 
     <!-- GroupId and ArtifactId for the project -->
     <groupId>edu.bu.cs665</groupId>
-    <artifactId>Hw2</artifactId>
+    <artifactId>EmailGenerator</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <!-- Project Packaging Type -->
     <packaging>jar</packaging>
 
     <!-- Name of the Project -->
-    <name>AutomaticBeverageMachine</name>
-    <url>http://maven.apache.org</url>
+    <name>EmailGenerator</name>
+    <url>http://emailgenerator.example.com</url>
 
     <!-- Project Properties (Java and Encoding Settings) -->
     <properties>
@@ -75,7 +76,7 @@
                     <includeProjectDependencies>true</includeProjectDependencies>
                     <includePluginDependencies>true</includePluginDependencies>
                     <killAfter>-1</killAfter>
-                    <mainClass>cope.Main</mainClass>
+                    <mainClass>edu.bu.met.cs665.hw.EmailGeneratorApplication</mainClass>
                     <cleanupDaemonThreads>false</cleanupDaemonThreads>
                 </configuration>
             </plugin>
@@ -84,7 +85,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>cope.Main</mainClass>
+                            <mainClass>edu.bu.met.cs665.hw.EmailGeneratorApplication</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
@@ -114,31 +115,26 @@
                     <consoleOutput>true</consoleOutput>
                 </configuration>
             </plugin>
-
-            <!-- Google Java Format Plugin -->
-<!--            <plugin>-->
-<!--                <groupId>com.google.googlejavaformat</groupId>-->
-<!--                <artifactId>google-java-format-maven-plugin</artifactId>-->
-<!--                <version>1.10.0</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <goals>-->
-<!--                            <goal>format</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
         </plugins>
     </build>
 
     <!-- Dependencies -->
     <dependencies>
+        <!-- JUnit 5 dependencies for testing -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.1</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.7.0</version> <!-- You can use a higher version if needed -->
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.7.0</version> <!-- You can use a higher version if needed -->
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Log4j dependency for logging -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>

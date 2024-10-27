@@ -1,4 +1,9 @@
-/Users/qiong/Documents/GitHub/CS665_Hw2/src/main/java/edu/bu/met/cs665/hw/DeliveryRequest.java
-/Users/qiong/Documents/GitHub/CS665_Hw2/src/main/java/edu/bu/met/cs665/hw/DeliveryTest.java
-/Users/qiong/Documents/GitHub/CS665_Hw2/src/main/java/edu/bu/met/cs665/hw/Driver.java
-/Users/qiong/Documents/GitHub/CS665_Hw2/src/main/java/edu/bu/met/cs665/hw/Shop.java
+/Users/qiong/Documents/GitHub/CS665_Hw3/src/main/java/edu/bu/met/cs665/hw/Customer.java
+/Users/qiong/Documents/GitHub/CS665_Hw3/src/main/java/edu/bu/met/cs665/hw/DiscountDecorator.java
+/Users/qiong/Documents/GitHub/CS665_Hw3/src/main/java/edu/bu/met/cs665/hw/EmailContentDecorator.java
+/Users/qiong/Documents/GitHub/CS665_Hw3/src/main/java/edu/bu/met/cs665/hw/EmailGenerationStrategy.java
+/Users/qiong/Documents/GitHub/CS665_Hw3/src/main/java/edu/bu/met/cs665/hw/EmailGeneratorApplication.java
+/Users/qiong/Documents/GitHub/CS665_Hw3/src/main/java/edu/bu/met/cs665/hw/GreetingDecorator.java
+/Users/qiong/Documents/GitHub/CS665_Hw3/src/main/java/edu/bu/met/cs665/hw/NewCustomerEmailStrategy.java
+/Users/qiong/Documents/GitHub/CS665_Hw3/src/main/java/edu/bu/met/cs665/hw/ReturningCustomerEmailStrategy.java
+/Users/qiong/Documents/GitHub/CS665_Hw3/src/main/java/edu/bu/met/cs665/hw/VipEmailStrategy.java

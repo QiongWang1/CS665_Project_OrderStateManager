@@ -1,4 +1,9 @@
-edu/bu/met/cs665/hw/Driver.class
-edu/bu/met/cs665/hw/DeliveryTest.class
-edu/bu/met/cs665/hw/Shop.class
-edu/bu/met/cs665/hw/DeliveryRequest.class
+edu/bu/met/cs665/hw/ReturningCustomerEmailStrategy.class
+edu/bu/met/cs665/hw/EmailGenerationStrategy.class
+edu/bu/met/cs665/hw/NewCustomerEmailStrategy.class
+edu/bu/met/cs665/hw/DiscountDecorator.class
+edu/bu/met/cs665/hw/VipEmailStrategy.class
+edu/bu/met/cs665/hw/Customer.class
+edu/bu/met/cs665/hw/EmailContentDecorator.class
+edu/bu/met/cs665/hw/GreetingDecorator.class
+edu/bu/met/cs665/hw/EmailGeneratorApplication.class
