@@ -1,109 +1,92 @@
 | CS-665       | Software Design & Patterns |
-|--------------|----------------------------|
-| Name         | Qiong Wang                 |
-| Date         | 10/26/2024                 |
-| Course       | Fall                       |
-| Assignment # | Hw3 Email Generation        |
+|--------------|--------|
+| Name         | Qiong Wang |
+| Date         | 11/10/2024 |
+| Course       | Fall   |
+| Assignment # | Hw4 Utilizing Legacy System       |
 
 # Assignment Overview
-This project is part of CS-665: Software Designs and Patterns. The objective is to develop an automated email generation system that serves various customer segments, such as Business, Returning, Frequent, New, and VIP customers. The system personalizes emails by generating base content for each segment and then adding optional, customized information like discounts or greetings.
 
-The project requires the implementation of the following components:
-1. EmailGenerationStrategy: Represents different strategies for generating base email content based on customer type. 
-2. EmailContentDecorator: Allows customization of base email content by adding optional elements such as greetings or discounts. 
-3. Customer: Uses an email generation strategy to generate customized emails.
+This project is part of CS-665: Software Designs and Patterns. The objective is to integrate a modern system with a legacy customer data system that provides information through a USB interface. This project demonstrates the **Adapter Pattern** by creating an adapter class that enables the new system to communicate seamlessly with the legacy system.
+
+The project implements the following key components:
+
+1. **CustomerDataAdapter**: An adapter that enables the new email generation system to retrieve customer data from a legacy USB interface.
+2. **MockCustomerDataUsb**: A mock implementation simulating the legacy data access via USB for testing purposes.
+3. **Customer**: Represents customer information and is used to generate customized email content.
 
 ### Key Requirements:
-1. Implement separate strategies for different customer types. 
-2. Use decorators to apply optional customizations to the base email. 
-3. Demonstrate the functionality with unit tests (3-5 JUnit tests). 
-4. Apply design patterns such as the Strategy Pattern and Decorator Pattern to enhance flexibility and reusability.
+1. Implement the **Adapter Pattern** to bridge the gap between the legacy system and the modern system.
+2. Create unit tests (3-5 JUnit tests) to verify the functionality and integration of the adapter with the new system.
+3. Document the design decisions and explain how the Adapter Pattern enables system integration.
 
 # GitHub Repository Link:
-(https://github.com/QiongWang1/CS665_Hw3)
-
+[https://github.com/QiongWang1/CS665_Hw4](https://github.com/QiongWang1/CS665_Hw4)
 
 # Implementation Description
 
-This project implements an automated email generation system for different customer segments using Strategy and Decorator Patterns. The system is composed of key components, each responsible for creating and customizing emails according to the customer type and additional preferences.
+This project implements an adapter class that integrates a legacy system with a modern email generation system. The adapter, **CustomerDataAdapter**, allows the new system to access customer data through the legacy USB-based interface, thereby maintaining compatibility without modifying the legacy code.
 
 ### Key Components:
-1. EmailGenerationStrategy: The interface defines the method generateEmailContent() for generating base email content. Each customer type (e.g., VIP, Returning) has a corresponding strategy that implements this method to create unique content. 
-    - **Subclasses**:
-      - `BusinessEmailStrategy`, `ReturningEmailStrategy`, `FrequentEmailStrategy`, `NewCustomerEmailStrategy`, `VipEmailStrategy` – each generates content specific to the customer type.
-2. EmailContentDecorator: The abstract decorator class that allows additional customization of the email content. Decorators implement the `generateEmailContent()` method to add features such as greetings and discounts.
-    - **Subclasses**:
-      - `GreetingDecorator`: Adds a personalized greeting to the email content.
-      - `DiscountDecorator`: Adds a discount or promotional message to the email.
-3. Customer: Represents a customer with a specific email generation strategy. It uses the selected strategy and decorators to produce the final email content.
+1. **CustomerDataAdapter**: Implements the interface required by the new system and adapts it to the methods provided by the legacy system's USB interface.
    - **Methods**:
-     - `generateEmailContent()`: Generates the full email content by applying the selected strategy and decorators.
-
-    
-
+      - `getCustomerInfo()`: Retrieves customer data and adapts it to the new system format.
+2. **MockCustomerDataUsb**: Simulates the legacy USB system to provide sample customer data. It is used to test the adapter without requiring the actual legacy hardware.
+   - **Methods**:
+      - `getCustomerViaUsb()`: Returns customer data for a given ID.
+3. **Customer**: Represents customer data for use in email generation. It leverages the adapter to retrieve necessary information from the legacy system.
 
 ### Design Pattern:
-The project applies two primary design patterns:
-1. Strategy Pattern:
-   - Each customer type has a specific strategy for generating the base content, enabling customization without modifying the core system.
-2. Decorator Pattern:
-   - Decorators provide optional, flexible customization of the base email content, allowing for easy addition of elements like greetings or discounts.
+This project applies the **Adapter Pattern** to integrate incompatible interfaces between the legacy and new systems.
+
+1. **Adapter Pattern**:
+   - The `CustomerDataAdapter` class serves as the adapter, translating the methods in `MockCustomerDataUsb` into a format usable by the new system. This enables seamless communication between the new and legacy systems without modifying the legacy codebase.
 
 ### System Flow:
-1. Each `Customer` is assigned an email generation strategy based on their type.
-2. The base email content is generated through the assigned strategy.
-3. Additional customizations are applied using decorators.
-4. The final email content is printed, demonstrating the application of both strategy and decorator patterns.
+1. The `CustomerDataAdapter` is initialized with a `MockCustomerDataUsb` instance.
+2. The new system requests customer information through the adapter.
+3. The adapter translates the request into a format compatible with the legacy system.
+4. The legacy system returns data, which is formatted and provided to the new system by the adapter.
 
 ### Unit Tests:
-- **testVipEmailWithGreetingAndDiscount()**: Verifies that VIP emails are generated with both greeting and discount customizations.
-- **testNewCustomerEmailWithGreetingOnly()**: Ensures that new customer emails include greetings without additional discounts.
-- **testReturningCustomerEmailBaseContent()**: Confirms that the correct base content is generated for returning customers without any decorators.
-
+- **testGetCustomerInfo()**: Verifies that the adapter correctly retrieves and formats customer data from the legacy system.
+- **testNonExistentCustomer()**: Ensures that the adapter handles cases where a customer ID is not found.
+- **testPrintCustomer()**: Checks that customer information is printed in the expected format.
 
 ### Assumptions:
-- The email content is structured according to customer type and can be further customized with greetings or discounts.
-- Each decorator enhances the email with additional features, and multiple decorators can be applied in sequence.
-
-
+- The legacy system is unmodifiable and must be accessed through a USB interface.
+- The adapter acts as a bridge to maintain backward compatibility, allowing the new system to integrate smoothly.
 
 ## Flexibility
-This project is designed to be extensible and adaptable:
-- **AAdding New Customer Types**: New customer segments can be added by creating additional strategies implementing EmailGenerationStrategy.
-- **AAdding New Customizations**: New decorators can be created to add extra customization layers to the email content, such as loyalty program information or special promotions, without changing existing classes.
-
-
+This project is designed for extensibility:
+- **Adding New Legacy Interfaces**: The adapter can be extended to support other legacy interfaces by implementing new methods within `CustomerDataAdapter`.
+- **Adding New Customer Attributes**: If the legacy system is updated, the adapter can be easily modified to map additional attributes.
 
 ## Simplicity & Understandability
 The system is structured to clearly separate responsibilities, making it straightforward to understand and extend:
-- **Single Responsibility**: Each class is responsible for a specific part of the email generation process, adhering to the Single Responsibility Principle (SRP).
-- **Reusability**: By using well-known design patterns, the system is flexible and easy to understand, particularly for developers familiar with Strategy and Decorator patterns.
-
-
+- **Single Responsibility**: Each class has a single responsibility, making it easy to maintain and extend.
+- **Reusability**: By using the Adapter Pattern, the adapter class can be reused with other legacy interfaces that have similar requirements.
 
 ## Avoidance of Duplicated Code
-The project follows the DRY (Don't Repeat Yourself) principle to maintain clean, reusable code:
-- **Centralized Customization**: The use of decorators centralizes customization logic, avoiding the need for duplicate code in each strategy class.
-- **Reusable Components**: Each strategy and decorator class can be reused or extended without needing to duplicate functionality.
-
-
+This project follows the **DRY (Don't Repeat Yourself)** principle:
+- **Centralized Adapter Logic**: The adapter centralizes the translation logic, avoiding the need for multiple classes to handle legacy data directly.
+- **Reusable Components**: The adapter and legacy system classes are designed for reusability without duplicating code.
 
 ## Design Patterns Used
-1. Strategy Pattern: Allows the system to select the appropriate email content generator based on customer type.
-2. Decorator Pattern: Provides an extensible way to add customized information to the email content, such as discounts or greetings.
-
+1. **Adapter Pattern**: Allows the new system to interface with the legacy system by providing a compatible interface.
 
 ### Other Potential Design Patterns:
-1. Factory Method: This pattern could be used to create instances of specific customer types or email customizations in future extensions.
-2. Template Method: Could be applied if there is a need for a more structured sequence of steps in generating and customizing emails.
+1. **Facade Pattern**: This pattern could encapsulate additional complexity if there are multiple legacy systems, creating a unified interface for the new system.
+2. **Factory Method**: Could be used in the future if there are multiple types of adapters for different legacy systems, enabling dynamic creation of specific adapters as needed.
 
 # UML Class Diagram
-(https://lucid.app/lucidchart/c972a526-08d5-4093-ab95-fa1f1784e4be/edit?invitationId=inv_d218dea2-a83d-4626-81fb-77551dc2eb43)
-![img_2.png](img_2.png)
+[UML Diagram Link](https://lucid.app/lucidchart/67ae33e0-ee01-4576-8a3b-cce540ef42b7/edit?viewport_loc=42%2C64%2C1586%2C837%2C0_0&invitationId=inv_511cdf4d-cde3-4bad-9bb5-e5abda14441c)
+![img_3.png](img_3.png)
 
 # Running JUnit Tests
 
-To verify the functionality of the system, JUnit tests have been implemented to test the core components of the project. These tests ensure that the system behaves as expected under various conditions.
+To verify the functionality of the system, JUnit tests have been implemented to test the core components of the project. These tests ensure that the adapter properly integrates with the legacy system and returns the expected results.
+
 ### Steps to Run the JUnit Tests:
 
 1. **Compile the Project**:

@@ -3,27 +3,43 @@ package edu.bu.met.cs665.hw;
 /**
  * Name: Qiong Wang
  * Course: CS-665 Software Designs & Patterns
- * Date: 10/26/2024
+ * Date: 11/10/2024
  * File Name: Customer.java
- * Description: Customer class that holds an email generation strategy to create personalized email content.
+ * Description: Class representing customer data with ID and name.
  */
+
 public class Customer {
-    private EmailGenerationStrategy emailStrategy;
+    private int customerId;
+    private String name;
 
     /**
-     * Constructor to set the email generation strategy for the customer.
-     * @param emailStrategy the strategy to generate email content
+     * Constructor for creating a Customer object.
+     * @param customerId The ID of the customer.
+     * @param name The name of the customer.
      */
-    public Customer(EmailGenerationStrategy emailStrategy) {
-        this.emailStrategy = emailStrategy;
+    public Customer(int customerId, String name) {
+        this.customerId = customerId;
+        this.name = name;
     }
 
     /**
-     * Generates an email based on the current strategy and any applied decorators.
-     * @return the generated email content as a String
+     * Returns the customer ID.
+     * @return The customer ID.
      */
-    public String generateEmail() {
-        return emailStrategy.generateEmailContent();
+    public int getCustomerId() {
+        return customerId;
+    }
+
+    /**
+     * Returns the name of the customer.
+     * @return The customer's name.
+     */
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer ID: " + customerId + ", Name: " + name;
     }
 }
-

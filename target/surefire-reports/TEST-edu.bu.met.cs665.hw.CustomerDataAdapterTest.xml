@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="edu.bu.met.cs665.hw.EmailGeneratorTest" time="0.023" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="edu.bu.met.cs665.hw.CustomerDataAdapterTest" time="0.028" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/qiong/Documents/GitHub/CS665_Hw3/target/test-classes:/Users/qiong/Documents/GitHub/CS665_Hw3/target/classes:/Users/qiong/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.0/junit-jupiter-engine-5.7.0.jar:/Users/qiong/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/qiong/.m2/repository/org/junit/platform/junit-platform-engine/1.7.0/junit-platform-engine-1.7.0.jar:/Users/qiong/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.0/junit-jupiter-api-5.7.0.jar:/Users/qiong/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/qiong/.m2/repository/org/junit/platform/junit-platform-commons/1.7.0/junit-platform-commons-1.7.0.jar:/Users/qiong/.m2/repository/org/apache/logging/log4j/log4j-core/2.19.0/log4j-core-2.19.0.jar:/Users/qiong/.m2/repository/org/apache/logging/log4j/log4j-api/2.19.0/log4j-api-2.19.0.jar:"/>
+    <property name="java.class.path" value="/Users/qiong/Documents/GitHub/CS665_Hw4/target/test-classes:/Users/qiong/Documents/GitHub/CS665_Hw4/target/classes:/Users/qiong/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/qiong/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/qiong/.m2/repository/org/apache/logging/log4j/log4j-core/2.19.0/log4j-core-2.19.0.jar:/Users/qiong/.m2/repository/org/apache/logging/log4j/log4j-api/2.19.0/log4j-api-2.19.0.jar:"/>
     <property name="java.vm.vendor" value="Azul Systems, Inc."/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="http://www.azul.com/"/>
@@ -12,10 +12,10 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/Users/qiong/.sdkman/candidates/java/17.0.9-zulu/zulu-17.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/qiong/Documents/GitHub/CS665_Hw3/target/surefire/surefirebooter-20241026221121865_3.jar /Users/qiong/Documents/GitHub/CS665_Hw3/target/surefire 2024-10-26T22-11-21_700-jvmRun1 surefire-20241026221121865_1tmp surefire_0-20241026221121865_2tmp"/>
+    <property name="sun.java.command" value="/Users/qiong/Documents/GitHub/CS665_Hw4/target/surefire/surefirebooter-20241110113043579_3.jar /Users/qiong/Documents/GitHub/CS665_Hw4/target/surefire 2024-11-10T11-30-43_534-jvmRun1 surefire-20241110113043579_1tmp surefire_0-20241110113043579_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/Users/qiong/Documents/GitHub/CS665_Hw3/target/test-classes:/Users/qiong/Documents/GitHub/CS665_Hw3/target/classes:/Users/qiong/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.0/junit-jupiter-engine-5.7.0.jar:/Users/qiong/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/qiong/.m2/repository/org/junit/platform/junit-platform-engine/1.7.0/junit-platform-engine-1.7.0.jar:/Users/qiong/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.0/junit-jupiter-api-5.7.0.jar:/Users/qiong/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/qiong/.m2/repository/org/junit/platform/junit-platform-commons/1.7.0/junit-platform-commons-1.7.0.jar:/Users/qiong/.m2/repository/org/apache/logging/log4j/log4j-core/2.19.0/log4j-core-2.19.0.jar:/Users/qiong/.m2/repository/org/apache/logging/log4j/log4j-api/2.19.0/log4j-api-2.19.0.jar:"/>
+    <property name="surefire.test.class.path" value="/Users/qiong/Documents/GitHub/CS665_Hw4/target/test-classes:/Users/qiong/Documents/GitHub/CS665_Hw4/target/classes:/Users/qiong/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/qiong/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/qiong/.m2/repository/org/apache/logging/log4j/log4j-core/2.19.0/log4j-core-2.19.0.jar:/Users/qiong/.m2/repository/org/apache/logging/log4j/log4j-api/2.19.0/log4j-api-2.19.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/qiong"/>
     <property name="user.language" value="en"/>
@@ -23,12 +23,12 @@
     <property name="java.version.date" value="2023-10-17"/>
     <property name="java.home" value="/Users/qiong/.sdkman/candidates/java/17.0.9-zulu/zulu-17.jdk/Contents/Home"/>
     <property name="file.separator" value="/"/>
-    <property name="basedir" value="/Users/qiong/Documents/GitHub/CS665_Hw3"/>
+    <property name="basedir" value="/Users/qiong/Documents/GitHub/CS665_Hw4"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/Users/qiong/Documents/GitHub/CS665_Hw3/target/surefire/surefirebooter-20241026221121865_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/qiong/Documents/GitHub/CS665_Hw4/target/surefire/surefirebooter-20241110113043579_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="17.0.9+8-LTS"/>
@@ -43,7 +43,7 @@
     <property name="java.vendor.url.bug" value="http://www.azul.com/support/"/>
     <property name="java.io.tmpdir" value="/var/folders/g2/x2lxrmlj5jxfc11df687bydh0000gn/T/"/>
     <property name="java.version" value="17.0.9"/>
-    <property name="user.dir" value="/Users/qiong/Documents/GitHub/CS665_Hw3"/>
+    <property name="user.dir" value="/Users/qiong/Documents/GitHub/CS665_Hw4"/>
     <property name="os.arch" value="aarch64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="native.encoding" value="UTF-8"/>
@@ -55,8 +55,9 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testReturningCustomerWithDiscount" classname="edu.bu.met.cs665.hw.EmailGeneratorTest" time="0.009"/>
-  <testcase name="testPlainVipCustomerEmail" classname="edu.bu.met.cs665.hw.EmailGeneratorTest" time="0.001"/>
-  <testcase name="testVipCustomerWithGreetingAndDiscount" classname="edu.bu.met.cs665.hw.EmailGeneratorTest" time="0.001"/>
-  <testcase name="testNewCustomerWithGreeting" classname="edu.bu.met.cs665.hw.EmailGeneratorTest" time="0.001"/>
+  <testcase name="testInvalidCustomerId" classname="edu.bu.met.cs665.hw.CustomerDataAdapterTest" time="0.001"/>
+  <testcase name="testPrintCustomer" classname="edu.bu.met.cs665.hw.CustomerDataAdapterTest" time="0.0"/>
+  <testcase name="testGetNonExistentCustomer" classname="edu.bu.met.cs665.hw.CustomerDataAdapterTest" time="0.0"/>
+  <testcase name="testAdapterDoesNotModifyMockData" classname="edu.bu.met.cs665.hw.CustomerDataAdapterTest" time="0.0"/>
+  <testcase name="testGetCustomerViaHttps" classname="edu.bu.met.cs665.hw.CustomerDataAdapterTest" time="0.0"/>
 </testsuite>

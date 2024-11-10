@@ -8,7 +8,7 @@
 
     <!-- GroupId and ArtifactId for the project -->
     <groupId>edu.bu.cs665</groupId>
-    <artifactId>EmailGenerator</artifactId>
+    <artifactId>UtilizingLegacySystem</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <!-- Project Packaging Type -->
@@ -120,17 +120,11 @@
 
     <!-- Dependencies -->
     <dependencies>
-        <!-- JUnit 5 dependencies for testing -->
+        <!-- JUnit 4 dependency for testing -->
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.7.0</version> <!-- You can use a higher version if needed -->
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.7.0</version> <!-- You can use a higher version if needed -->
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
 

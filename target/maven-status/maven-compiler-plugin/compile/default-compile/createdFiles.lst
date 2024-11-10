@@ -1,9 +1,6 @@
-edu/bu/met/cs665/hw/ReturningCustomerEmailStrategy.class
-edu/bu/met/cs665/hw/EmailGenerationStrategy.class
-edu/bu/met/cs665/hw/NewCustomerEmailStrategy.class
-edu/bu/met/cs665/hw/DiscountDecorator.class
-edu/bu/met/cs665/hw/VipEmailStrategy.class
+edu/bu/met/cs665/hw/MockCustomerDataHttps.class
 edu/bu/met/cs665/hw/Customer.class
-edu/bu/met/cs665/hw/EmailContentDecorator.class
-edu/bu/met/cs665/hw/GreetingDecorator.class
-edu/bu/met/cs665/hw/EmailGeneratorApplication.class
+edu/bu/met/cs665/hw/CustomerDataViaHttps.class
+edu/bu/met/cs665/hw/CustomerDataViaUsb.class
+edu/bu/met/cs665/hw/CustomerDataAdapter.class
+edu/bu/met/cs665/hw/MockCustomerDataUsb.class
