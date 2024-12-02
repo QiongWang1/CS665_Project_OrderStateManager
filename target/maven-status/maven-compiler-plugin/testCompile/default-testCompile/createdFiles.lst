@@ -1,1 +1,4 @@
-edu/bu/met/cs665/hw/CustomerDataAdapterTest.class
+edu/bu/met/cs665/hw/OrderVisitorTest.class
+edu/bu/met/cs665/hw/OrderMementoTest.class
+edu/bu/met/cs665/hw/OrderHandlerTest.class
+edu/bu/met/cs665/hw/OrderBuilderTest.class
