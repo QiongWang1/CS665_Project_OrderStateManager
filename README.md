@@ -9,8 +9,8 @@
 
 This project, **Order State Manager**, is part of CS-665: Software Designs and Patterns. The objective is to implement a **Memento Pattern** to manage and restore the states of an order system. The Memento Pattern is demonstrated by creating a system that allows saving and restoring the state of an order, including product details, logistics, and promotions.
 
-The project implements the following key components:
 
+The project implements the following key components:
 1. **Order**: Represents an order, including its products, logistics, promotions, and total price.
 2. **OrderMemento**: Captures the state of an order and allows it to be restored later.
 3. **OrderCaretaker**: Manages a history of mementos, allowing users to save and restore order states.
@@ -161,7 +161,7 @@ This project is designed to support:
 # UML Class Diagram
 ![https://lucid.app/lucidchart/22a05d1e-967c-4818-a1ca-6e99cfba8bc7/edit?viewport_loc=1172%2C388%2C4199%2C2552%2C0_0&invitationId=inv_f012cd08-024c-4c23-b5c4-105e4735be23]
 
-![img.png](img.png)
+![img_1.png](img_1.png)
 
 ---
 
